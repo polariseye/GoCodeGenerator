@@ -1,0 +1,7 @@
+1. 加载目标语言配置:loadconfig
+2. 打开数据库连接 open 
+3. 选择要使用的数据库 selectdb
+4. 选择代码生成要使用的模板 selecttemplate 
+5. build 进行代码生成
+
+flagly项目请使用：https://github.com/polariseye/flagly

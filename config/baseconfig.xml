@@ -1,0 +1,8 @@
+<BaseConfig>
+    <HeaderInfo AuthorName="polariseye" TimeFormat="2006/01/02 15:04:05" />
+    <DefaultConfig>config_csharp.xml</DefaultConfig>
+    <DbConnection>
+        <ConnectionItem Name="trunk" UserName="root" Pwd="1234" Ip="127.0.0.1" Port="3306" DefaultDb="trunk" />
+		<ConnectionItem Name="dzz_model_trunk" UserName="root" Pwd="1234" Ip="127.0.0.1" Port="3306" DefaultDb="dzz_model_trunk" />
+    </DbConnection>
+</BaseConfig>

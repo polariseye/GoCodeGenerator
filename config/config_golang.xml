@@ -1,0 +1,94 @@
+<TemplateConfig>
+    <!--模版配置-->
+    <Template>
+        <GroupItem Name="b_go">
+            <TemplateItem TemplatePath="template/golang/b_template.tpl" FileNameFormat="{{.TargetTable.TableName |EntityName}}.go" />
+        </GroupItem>
+    </Template>
+    <!--数据类型映射-->
+    <DataTypeMapTable>
+        <MapItem OldValue="char" TargetValue="string" />
+        <MapItem OldValue="char(36)" TargetValue="Guid" />
+        <MapItem OldValue="int" TargetValue="int32" />
+        <MapItem OldValue="smallint" TargetValue="int8" />
+        <MapItem OldValue="tinyint" TargetValue="int8" />
+        <MapItem OldValue="bigint" TargetValue="int64" />
+        <MapItem OldValue="varchar" TargetValue="string" />
+        <MapItem OldValue="datetime" TargetValue="time.Time" Import="time" />
+        <MapItem OldValue="bit" TargetValue="bool" />
+        <MapItem OldValue="time" TargetValue="time.Time" Import="time" />
+        <MapItem OldValue="date" TargetValue="string" />
+        <MapItem OldValue="text" TargetValue="string" />
+        <MapItem OldValue="mediumtext" TargetValue="string" />
+        <MapItem OldValue="longtext" TargetValue="string" />
+        <MapItem OldValue="float" TargetValue="float64" />
+        <MapItem OldValue="double" TargetValue="float64" />
+        <MapItem OldValue="decimal" TargetValue="float64" />
+    </DataTypeMapTable>
+    <!-- 字段名映射 -->
+    <ColumnMapTable>
+        <MapItem OldValue="VIT" TargetValue="vit" />
+        <MapItem OldValue="STA" TargetValue="sta" />
+        <MapItem OldValue="ID" TargetValue="id" />
+        <MapItem OldValue="EXP" TargetValue="exp" />
+        <MapItem OldValue="LV" TargetValue="lv" />
+        <MapItem OldValue="VIP" TargetValue="vip" />
+        <MapItem OldValue="FAP" TargetValue="fap" />
+        <MapItem OldValue="NAId" TargetValue="naid" />
+        <MapItem OldValue="RAId" TargetValue="raid" />
+        <MapItem OldValue="SPD" TargetValue="spd" />
+        <MapItem OldValue="FSP" TargetValue="fsp" />
+        <MapItem OldValue="RP" TargetValue="rp" />
+        <MapItem OldValue="HIT" TargetValue="hit" />
+        <MapItem OldValue="DOD" TargetValue="dod" />
+        <MapItem OldValue="CRI" TargetValue="cri" />
+        <MapItem OldValue="TEN" TargetValue="ten" />
+        <MapItem OldValue="BLO" TargetValue="blo" />
+        <MapItem OldValue="BOG" TargetValue="bog" />
+        <MapItem OldValue="CRId" TargetValue="crid" />
+        <MapItem OldValue="TEND" TargetValue="tend" />
+        <MapItem OldValue="NAID" TargetValue="naid" />
+        <MapItem OldValue="RAID" TargetValue="raid" />
+        <MapItem OldValue="HP" TargetValue="hp" />
+        <MapItem OldValue="AP" TargetValue="ap" />
+        <MapItem OldValue="DEF" TargetValue="def" />
+        <MapItem OldValue="CRID" TargetValue="crid" />
+        <MapItem OldValue="APR" TargetValue="apr" />
+        <MapItem OldValue="HPR" TargetValue="hpr" />
+        <MapItem OldValue="DEFR" TargetValue="defr" />
+        <MapItem OldValue="CP" TargetValue="cp" />
+        <MapItem OldValue="BCP" TargetValue="bcp" />
+        <MapItem OldValue="CPR" TargetValue="cpr" />
+        <MapItem OldValue="BCPR" TargetValue="bcpr" />
+        <MapItem OldValue="DAMADD" TargetValue="damadd" />
+        <MapItem OldValue="DAMCUT" TargetValue="damcut" />
+        <MapItem OldValue="DAMADDR" TargetValue="damaddr" />
+        <MapItem OldValue="DAMCUTR" TargetValue="damcutr" />
+		<MapItem OldValue="RADAMADDR" TargetValue="radamaddr" />
+		<MapItem OldValue="RADAMCUTR" TargetValue="radamcutr" />
+		<MapItem OldValue="RBDAMADDR" TargetValue="rbdamaddr" />
+		<MapItem OldValue="RBDAMCUTR" TargetValue="rbdamcutr" />
+		<MapItem OldValue="RCDAMADDR" TargetValue="rcdamaddr" />
+		<MapItem OldValue="RCDAMCUTR" TargetValue="rcdamcutr" />
+		<MapItem OldValue="RDDAMADDR" TargetValue="rddamaddr" />
+		<MapItem OldValue="RDDAMCUTR" TargetValue="rddamcutr" />
+    </ColumnMapTable>
+    <!-- 前缀处理 -->
+    <TablePrefix>
+        <!--
+        MethodType：replace、remove、exclude
+        -->
+        <FixionItem Value="b_" MethodType="remove" TargetValue=""/>
+        <FixionItem Value="d_" MethodType="remove" TargetValue=""/>
+        <FixionItem Value="p_" MethodType="remove" TargetValue=""/>
+        <FixionItem Value="g_" MethodType="replace" TargetValue="Global"/>
+    </TablePrefix>
+    <!-- 后缀处理 -->   
+    <TableStuffix>
+        <!--
+        MethodType：replace、remove、exclude
+        -->
+        <FixionItem Value="_r" MethodType="replace" TargetValue="Relation"/>
+        <FixionItem Value="_c" MethodType="replace" TargetValue="Config"/>
+    </TableStuffix>
+</TemplateConfig>
