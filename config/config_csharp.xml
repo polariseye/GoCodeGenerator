@@ -4,18 +4,6 @@
         <GroupItem Name="b_csharp">
             <TemplateItem TemplatePath="template/csharp/b_model.tpl" FileNameFormat="{{.TargetTable.TableName |EntityName}}.cs" />
         </GroupItem>
-        <GroupItem Name="d_csharp">
-            <TemplateItem TemplatePath="template/csharp/d_model.tpl" FileNameFormat="{{.TargetTable.TableName |EntityName}}.cs" />
-            <TemplateItem TemplatePath="template/csharp/d_dal.tpl" FileNameFormat="{{.TargetTable.TableName |EntityName}}DAL.cs" />
-        </GroupItem>
-        <GroupItem Name="p_csharp">
-            <TemplateItem TemplatePath="template/csharp/p_model.tpl" FileNameFormat="{{.TargetTable.TableName |EntityName}}.cs" />
-            <TemplateItem TemplatePath="template/csharp/p_dal.tpl" FileNameFormat="{{.TargetTable.TableName |EntityName}}DAL.cs" />
-        </GroupItem>
-        <GroupItem Name="g_csharp">
-            <TemplateItem TemplatePath="template/csharp/g_model.tpl" FileNameFormat="{{.TargetTable.TableName |EntityName}}.cs" />
-            <TemplateItem TemplatePath="template/csharp/g_dal.tpl" FileNameFormat="{{.TargetTable.TableName |EntityName}}DAL.cs" />
-        </GroupItem>
     </Template>
     <!--数据类型映射-->
     <DataTypeMapTable>
@@ -91,16 +79,12 @@
         MethodType：replace、remove、exclude
         -->
         <FixionItem Value="b_" MethodType="remove" TargetValue=""/>
-        <FixionItem Value="d_" MethodType="remove" TargetValue=""/>
-        <FixionItem Value="p_" MethodType="remove" TargetValue=""/>
-        <FixionItem Value="g_" MethodType="replace" TargetValue="Global"/>
     </TablePrefix>
     <!-- 后缀处理 -->   
     <TableStuffix>
         <!--
         MethodType：replace、remove、exclude
         -->
-        <FixionItem Value="_r" MethodType="replace" TargetValue="Relation"/>
-        <FixionItem Value="_c" MethodType="replace" TargetValue="Config"/>
+        <FixionItem Value="_b" MethodType="replace" TargetValue="B"/>
     </TableStuffix>
 </TemplateConfig>

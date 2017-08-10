@@ -79,16 +79,12 @@
         MethodType：replace、remove、exclude
         -->
         <FixionItem Value="b_" MethodType="remove" TargetValue=""/>
-        <FixionItem Value="d_" MethodType="remove" TargetValue=""/>
-        <FixionItem Value="p_" MethodType="remove" TargetValue=""/>
-        <FixionItem Value="g_" MethodType="replace" TargetValue="Global"/>
     </TablePrefix>
     <!-- 后缀处理 -->   
     <TableStuffix>
         <!--
         MethodType：replace、remove、exclude
         -->
-        <FixionItem Value="_r" MethodType="replace" TargetValue="Relation"/>
-        <FixionItem Value="_c" MethodType="replace" TargetValue="Config"/>
+        <FixionItem Value="_b" MethodType="replace" TargetValue="B"/>
     </TableStuffix>
 </TemplateConfig>
